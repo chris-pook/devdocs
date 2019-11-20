@@ -20,11 +20,13 @@ The following line in the `composer.json` metapackage installs Inventory Managem
 
 For a list of {{site.data.var.im}} metapackage versions, see the [release notes]({{site.baseurl}}/guides/v2.3/inventory/release-notes.html).
 
-The {{site.data.var.im}} installation process adds all modules to the `<Magento_installation_directory>/app/etc/config.php` file. A `1` value indicates the corresponding module is enabled. The following list of modules are added (v1.1.2 Beta):
+The {{site.data.var.im}} installation process adds all modules to the `<Magento_installation_directory>/app/etc/config.php` file. A `1` value indicates the corresponding module is enabled. The following list of modules are added (v1.1.3):
 
 ```php
+        'Magento_CatalogInventoryGraphQl' => 0,
         'Magento_Inventory' => 0,
         'Magento_InventoryAdminUi' => 0,
+        'Magento_InventoryAdvancedCheckout' => 0,
         'Magento_InventoryApi' => 0,
         'Magento_InventoryGraphQl' => 0,
         'Magento_InventoryBundleProduct' => 0,
@@ -55,6 +57,7 @@ The {{site.data.var.im}} installation process adds all modules to the `<Magento_
         'Magento_InventoryLowQuantityNotificationApi' => 0,
         'Magento_InventoryMultiDimensionalIndexerApi' => 0,
         'Magento_InventoryProductAlert' => 0,
+        'Magento_InventoryRequisitionList' => 0,
         'Magento_InventoryReservations' => 0,
         'Magento_InventoryReservationsApi' => 0,
         'Magento_InventoryReservationCli' => 0,
@@ -84,11 +87,13 @@ You may need to disable {{site.data.var.im}} modules to:
 *  Use custom or third party inventory and order management modules.
 *  Use [Magento Order Management](https://omsdocs.magento.com) for inventory and order management. The current Order Management connector does not support {{site.data.var.im}} interfaces. We plan to support this integration in a later release.
 
-To disable {{site.data.var.im}}, see the instructions for [Enable or disable modules]({{site.baseurl}}/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html). When complete, you should see the following modules and values in `<Magento_installation_directory>/app/etc/config.php` (v1.1.2 Beta):
+To disable {{site.data.var.im}}, see the instructions for [Enable or disable modules]({{site.baseurl}}/guides/v2.3/install-gde/install/cli/install-cli-subcommands-enable.html). When complete, you should see the following modules and values in `<Magento_installation_directory>/app/etc/config.php` (v1.1.3):
 
 ```php
+        'Magento_CatalogInventoryGraphQl' => 0,
         'Magento_Inventory' => 0,
         'Magento_InventoryAdminUi' => 0,
+        'Magento_InventoryAdvancedCheckout' => 0,
         'Magento_InventoryApi' => 0,
         'Magento_InventoryGraphQl' => 0,
         'Magento_InventoryBundleProduct' => 0,
@@ -119,6 +124,7 @@ To disable {{site.data.var.im}}, see the instructions for [Enable or disable mod
         'Magento_InventoryLowQuantityNotificationApi' => 0,
         'Magento_InventoryMultiDimensionalIndexerApi' => 0,
         'Magento_InventoryProductAlert' => 0,
+        'Magento_InventoryRequisitionList' => 0,
         'Magento_InventoryReservations' => 0,
         'Magento_InventoryReservationsApi' => 0,
         'Magento_InventoryReservationCli' => 0,
